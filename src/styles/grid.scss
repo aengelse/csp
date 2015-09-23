@@ -1,0 +1,15 @@
+@import '../../bower_components/susy/sass/susy';
+
+$susy: (
+  columns: 12,
+  gutters: 1/4
+);
+
+.container {
+  @include container(100rem);
+  padding: 1.2rem;
+}
+
+.span-12 {
+  @include span(12);
+}

@@ -1,0 +1,13 @@
+input {
+  border: 1px solid darken($color-white, 25%);
+  border-radius: .4rem;
+  //box-shadow: 0 1px 0 darken($color-white, 25%) inset;
+  font-size: 1.4rem;
+  padding: .7rem .9rem;
+
+  &:focus {
+    border: 1px solid $color-blue;
+    //box-shadow: 0 1px 0 $color-blue inset;
+    outline: none;
+  }
+}

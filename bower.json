@@ -1,0 +1,23 @@
+{
+  "name": "coolblue-search-prototype",
+  "version": "0.0.0",
+  "homepage": "https://github.com/ngerritsen/csp",
+  "authors": [
+    "Niels Gerritsen <n.c.gerritsen@gmail.com>"
+  ],
+  "moduleType": [
+    "es6",
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "susy": "~2.2.6"
+  }
+}

@@ -1,0 +1,42 @@
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import './variables';
+@import './grid';
+@import './buttons';
+@import './input-fields';
+@import './header';
+
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: $color-white;
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 1.6rem;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 0 0 1em 0;
+  padding: 0;
+}
+
+p {
+  margin: 0 0 1em 0;
+  padding: 0;
+}
+
+.page-title {
+  color: $color-darkblue;
+  font-weight: regular;
+  margin: .6rem 0 1.2rem 0;
+  text-transform: uppercase;
+}
