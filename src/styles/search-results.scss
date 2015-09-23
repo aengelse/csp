@@ -1,18 +1,19 @@
 @import './variables';
 
 .search-results--container {
-  position: fixed;
   left: 5rem;
-  top: 5rem;
+  position: fixed;
+  top: 4.8rem;
   width: 100%;
 }
 
 .search-results {
   background-color: $color-white;
   border: 1px solid lighten($color-black, 70%);
+  border-radius: 2px;
   color: lighten($color-black, 10%);
   font-size: 1.3rem;
   margin: 0 auto;
   padding: 1rem 1.2rem;
-  width: 40rem;
+  width: $search-width;
 }

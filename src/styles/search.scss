@@ -1,19 +1,20 @@
 @import './variables';
 
 .search--input {
-  border: 1px solid lighten($color-black, 40%);
-  border-radius: 0;
+  border: 1px solid lighten($color-black, 70%);
+  border-radius: 3px;
   display: block;
   font-size: 1.3rem;
-  margin: .4rem auto;
-  padding: 1.3rem 1.4rem;
-  width: 40rem;
+  margin: .6rem auto;
+  padding: 1rem 1.3rem;
+  width: $search-width;
 
   &:focus {
-    border: 1px solid lighten($color-black, 80%);
+    border: 1px solid desaturate(darken($color-blue, 20%), 20%);
+    box-shadow: 0 0 3px desaturate(darken($color-blue, 10%), 10%);
   }
 
   &:hover {
-    border: 1px solid lighten($color-black, 60%);
+    border: 1px solid desaturate(darken($color-blue, 10%), 20%);
   }
 }
