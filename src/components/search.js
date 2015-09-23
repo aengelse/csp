@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import { IDLE, ACTIVE } from '../constants/search-constants'
-import { changeSearchState } from '../actions/search-actions'
+import SearchResults from './search-results'
 
 import '../styles/search.scss'
 
@@ -20,14 +20,24 @@ class Search extends Component {
   }
 
   render() {
+    const { state, onChangeState } = this.props
+    let searchResults = ''
+
+    if(state === ACTIVE) {
+      searchResults = <SearchResults state={state} onChangeState={onChangeState} />
+    }
+
     return (
-      <input
-        className="search--input"
-        type="text"
-        placeholder="Zoeken naar..."
-        onFocus={this._handleFocus}
-        onBlur={this._handleBlur}
-      />
+      <div>
+        <input
+          className="search--input"
+          type="text"
+          placeholder="Zoeken naar..."
+          onFocus={this._handleFocus}
+          onBlur={this._handleBlur}
+        />
+        {searchResults}
+      </div>
     )
   }
 }
