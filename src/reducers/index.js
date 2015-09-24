@@ -1,1 +1,1 @@
-export { default as searchState } from './search-state-reducer'
+export { default as search } from './search'

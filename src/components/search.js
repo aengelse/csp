@@ -1,14 +1,23 @@
 import React, { Component, PropTypes } from 'react'
 import { IDLE, ACTIVE } from '../constants/search-constants'
-import SearchResults from './search-results'
 
 import '../styles/search.scss'
 
 class Search extends Component {
+  static propTypes = {
+    onChangeState: PropTypes.func.isRequired,
+    onChangeTerm: PropTypes.func.isRequired
+  }
+
+  static defaultProps = {
+    state: IDLE
+  }
+
   constructor(...props) {
     super(...props)
     this._handleFocus = this._handleFocus.bind(this)
     this._handleBlur = this._handleBlur.bind(this)
+    this._handleChange = this._handleChange.bind(this)
   }
 
   _handleFocus(e) {
@@ -19,36 +28,26 @@ class Search extends Component {
     this.props.onChangeState(IDLE)
   }
 
+  _handleChange(e) {
+    const term = this.refs.searchInput.value
+    this.props.onChangeTerm(term)
+  }
+
   render() {
-    const { state, onChangeState } = this.props
-    let searchResults = ''
-
-    if(state === ACTIVE) {
-      searchResults = <SearchResults state={state} onChangeState={onChangeState} />
-    }
-
     return (
       <div>
         <input
           className="search--input"
           type="text"
+          ref="searchInput"
           placeholder="Zoeken naar..."
           onFocus={this._handleFocus}
           onBlur={this._handleBlur}
+          onChange={this._handleChange}
         />
-        {searchResults}
       </div>
     )
   }
 }
-
-Search.propTypes = {
-  state: PropTypes.string.isRequired,
-  onChangeState: PropTypes.func.isRequired
-}
-
-// Search.defaultProps = {
-//   state: IDLE
-// }
 
 export default Search
