@@ -54,5 +54,10 @@ const terms = [
   'Miele',
   'Philips',
   'Sony',
-  'Stofzuigers'
+  'Stofzuigers',
+  'Samsung Galaxy S6',
+  'Samsung Galaxy S6 Edge',
+  'Samsung Galaxy S5',
+  'Chromecast',
+  'Thule Crossover'
 ]

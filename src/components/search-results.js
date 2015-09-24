@@ -17,16 +17,18 @@ class SearchResults extends Component {
     let content = <i>Suggesties..</i>
 
     if(term && results.length > 0) {
-      content = results.map(r => (
-        <span key={r}>
-          {r}<br/>
+      content = results.map(result => (
+        <span key={result}>
+          {result}<br/>
         </span>
       ))
     }
     else if(term) {
-      content = <span>Geen resultaten gevonden voor <strong>{term}</strong><br/>
-      Misschien deze producten?<br/>
-      {content}</span>
+      content = <span>
+          <p>Geen resultaten gevonden voor <strong>{term}</strong></p>
+          Misschien deze producten?<br/>
+          {content}
+        </span>
     }
 
 
